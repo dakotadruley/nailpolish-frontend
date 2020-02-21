@@ -20,10 +20,9 @@ export default class Home extends Component {
       return (
           <>
            <ul className='nailPolishesContainer'>
-               {
-                this.state.data.map((nailPolish, i)  =>
+               { this.state.data.map((nailPolish, i)  =>
                 <NailPolish nailPolish={this.state.data[i]} />
-                )};
+                )}
           </ul> 
           </>
       );

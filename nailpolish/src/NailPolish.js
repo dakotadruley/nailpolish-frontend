@@ -14,14 +14,11 @@ export default class NailPolish extends React.Component {
         return (
             <>
              <li className='nailPolishItem'>
-                <h2>Color: { name }</h2>
-                <table>
-                    <tr>
-                        <td>Price: { price }</td>
-                        <td>Quickdry: { is_quickdry }</td>
-                        <td>Brand: { brand }</td>
-                    </tr>
-                </table>
+                <h2>{ name }</h2>
+                   <div className='priceBrand'> <h3>{ brand }</h3> - <p>Price: ${ price }</p> </div>
+                        
+                    {/* Quickdry: { is_quickdry } */}
+
                 <div className='imageContainer'>
                     <img className='imageSize' src={ url } alt={ nailPolish.name }/>
                 </div>
