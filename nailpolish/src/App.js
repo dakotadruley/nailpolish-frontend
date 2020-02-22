@@ -13,6 +13,7 @@ export default class App extends Component {
       <>
       <Router>
         <h1>Nail Polishes</h1>
+        <h4>by Dakota and Jenna</h4>
         <Switch>
           <Route exact path='/' component={Home} />
         </Switch>
