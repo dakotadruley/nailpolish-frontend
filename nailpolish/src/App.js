@@ -3,9 +3,9 @@ import './App.css';
 import {
   Route,
   Switch,
-  Link,
   BrowserRouter as Router, } from 'react-router-dom';
 import Home from './Home.js';
+import Detail from './Detail.js';
 
 export default class App extends Component {
   render() {
@@ -16,6 +16,7 @@ export default class App extends Component {
         <h4>by Dakota and Jenna</h4>
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/nailpolish/:id' component={Detail} />
         </Switch>
       </Router>
       </>
