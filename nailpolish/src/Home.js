@@ -23,6 +23,7 @@ export default class Home extends Component {
                <Link to={`/nailpolish/${nailPolish.id}`} >
                     <NailPolish nailPolish={this.state.data[i]} />
                 </Link>)}
+                
           </ul> 
           </>
       );
