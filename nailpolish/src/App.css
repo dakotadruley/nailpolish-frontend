@@ -21,10 +21,15 @@ body {
 
 .nailPolishItem {
   background-color: white;
+  color: black;
   margin: 1em;
   padding: 1em;
   border: 0.25em solid black;
   width: 300px;
+}
+
+.nailPolishesContainer a {
+  text-decoration: none;
 }
 
 .priceBrand {
@@ -63,4 +68,19 @@ h1 {
 h4 {
   text-align: center;
   margin-top: 0.01em;
+}
+
+.navUL {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.navLI {
+  color: black;
+  margin: 1em;
+}
+
+.navUL a {
+  text-decoration: none;
 }
