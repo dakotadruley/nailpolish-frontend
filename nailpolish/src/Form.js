@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import request from 'superagent';
 
 export default class Form extends Component {
+   
     state = {
         brands: [],
         isQuickdry: false,
@@ -11,7 +12,23 @@ export default class Form extends Component {
     componentDidMount = async () => {
         const brands = await request.get('https://ancient-waters-69197.herokuapp.com/api/brands');
 
-        this.setState({ brands: brands.body });
+        this.setState({ brands: brands.body })
+    }
+
+
+    componentWillReceiveProps = async () => {
+        if (this.props.nailPolish) {
+
+            const nailPolish = await request.get(`https://ancient-waters-69197.herokuapp.com/api/nailpolish/${this.props.nailPolish.id}`);    
+
+
+            this.setState({ 
+                name: nailPolish.name,
+                url: nailPolish.url,
+                price: nailPolish.price,
+                isQuickdry: nailPolish.isQuickdry,
+                brandId: nailPolish.brandId
+            })};
     }
 
     handleNameChange = (e) => {
@@ -54,9 +71,11 @@ export default class Form extends Component {
         console.log(dataBase);
 
         this.props.history.push('/');
+
     }
 
     render() {
+
         return (
             <div className='formContainer'>
                 <form onSubmit={this.handleSubmit}>

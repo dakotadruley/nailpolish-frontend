@@ -78,7 +78,8 @@ h4 {
 
 .navLI {
   color: black;
-  margin: 1em;
+  margin: 1em; 
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navUL a {

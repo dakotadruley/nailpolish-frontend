@@ -8,7 +8,7 @@ export default class Header extends Component {
             <ul className='navUL'>
             <Link to='/nailpolishes/'><li className='navLI'>Create a Nail Polish</li>
                 </Link>
-            <Link to=''><li className='navLI'>Update a Nail Polish</li></Link>
+            <Link to='/update/nailpolish'><li className='navLI'>Update a Nail Polish</li></Link>
             </ul>
         )
     }

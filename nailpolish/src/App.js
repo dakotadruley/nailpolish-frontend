@@ -8,6 +8,7 @@ import Home from './Home.js';
 import Detail from './Detail.js';
 import Form from './Form.js';
 import Header from './Header.js';
+import Update from './Update.js';
 
 export default class App extends Component {
   render() {
@@ -21,6 +22,7 @@ export default class App extends Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/nailpolish/:id' component={Detail} />
           <Route exact path='/nailpolishes' component={Form} />
+          <Route exact path='/update/nailpolish' component={Update} />
         </Switch>
       </Router>
       </>
